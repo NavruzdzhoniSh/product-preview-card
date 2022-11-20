@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.card-image {
+  width: 300px;
+  background: url("../images/image-product-desktop.jpg") center;
+  background-size: cover;
+  border-radius: 15px 0 0 15px;
+}
+
+.card-description {
+  width: 300px;
+  padding: 30px;
+}
+
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.product-type,
+.card-description > p,
+.card-price-old {
+  font-family: "Montserrat";
+  color: hsl(228, 12%, 48%);
+}
+
+.card-description > h2 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 30px;
+}
+
+.card-description > p {
+  margin-bottom: 30px;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-price-new {
+  font-family: "Fraunces", sans-serif;
+  font-size: 36px;
+  color: hsl(158, 36%, 37%);
+  margin-right: 20px;
+}
+
+.card-price-old {
+  text-decoration: line-through;
+}
+
+.card-description > button {
+  padding: 10px 70px;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.card-description > button > img {
+  margin-right: 5px;
+}
+
+.card-description > button:hover {
+  background-color: hsl(158, 42%, 28%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+  .card-image {
+    height: 200px;
+    background: url("../images/image-product-mobile.jpg") center;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+    
+  }
+
+  .card-image-mobile {
+    display: block;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .product-type,
+  .card-description > p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .card-description > h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .card-price {
+    margin-bottom: 15px;
+  }
+
+  .card-price-new {
+    font-size: 26px;
+  } 
+
+  .card-price-old {
+    font-size: 14px;
+  }
+  
+}
